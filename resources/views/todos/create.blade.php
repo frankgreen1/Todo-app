@@ -7,12 +7,16 @@
         <span class="fas fa-arrow-left"/>Back</a>
 </div>
 
-<form action="{{route('todo.store')}}" method="POST" class="py-6">
+<form action="{{route('todo.store')}}" method="POST" class="py-8">
   <x-alert/>
   @csrf
  <div class="py-1">
-    <input type="text" name="title" placeholder="task title" class="py-2 px-2 border" />
+    <input type="text" name="title" placeholder="task title" class="py-2 px-1 border" />
+
  </div>
+  <div class="py-1 " id='datetimepicker1'>
+    <input type="text" id="date" name="todo_date" class="py-2 px-2 border datetimepicker" placeholder="Set date"/>
+  </div>
 
  <div class="py-1">
     <textarea name="description" placeholder="task description" class="py-2 px-2 border"></textarea>

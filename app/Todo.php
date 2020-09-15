@@ -11,10 +11,15 @@ class Todo extends Model
         'title',
         'completed',
         'user_id',
-        'description'
+        'description',
+        'todo_date'
 
     ];
 
+    public function setTransactionDateAttribute($value)
+{
+    $this->attributes['todo_date'] = Carbon::createFromFormat('m/d/Y', $value)->format('Y-m-d');
+}
     public function steps()
     {
         return $this->hasMany(Step::class);

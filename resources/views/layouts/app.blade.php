@@ -50,6 +50,11 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
+                                <div class="display">
+                                    <a href="{{ route('todo.index')}}">Make a Todo List</a>
+
+                                </div>
+
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 @if(Auth::user()->avatar)
